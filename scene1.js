@@ -4,12 +4,14 @@ class scene1 extends Phaser.Scene {
   }
 
   preload(){
-   this.load.image('sprite frame 1.png','assets/sprite frame 1.png');
+   this.load.image('sprite-frame-1.png','assets/sprite-frame-1.png');
   }
 
   create(){
 
-    this.image = this.add.image(400,300,'sprite frame 1.png');
+    this.add.image(400,300,'assets/sprite-frame-1.png');
+
+
 
     this.input.keyboard.on ('keyup_D', function(event){
       this.image.x += 10;
@@ -36,4 +38,3 @@ class scene1 extends Phaser.Scene {
       if(this.key_A.isDown)
         this.image.x--;
       }
-}
